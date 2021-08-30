@@ -36,7 +36,7 @@ export default {
 
     input.form-element{
         width: 500px;
-        background:#FFF2;
+        background:rgba(255, 254, 254, 0.829);
         border-top-left-radius:8px;
         border-bottom-left-radius:8px;
     }
@@ -46,5 +46,9 @@ export default {
         background-color: #2196F3;
         border-top-right-radius:8px;
         border-bottom-right-radius: 8px;
+    }
+
+    button.form-element:hover{
+        background-color: #58aff7;
     }
 </style>    

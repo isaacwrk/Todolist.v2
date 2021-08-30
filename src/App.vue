@@ -4,17 +4,19 @@
 		<TaskProgress :progress="progress"/>
 		<NewTask @taskAdded="addTask"></NewTask>
 		<TaskGrid :tasks="tasks" @taskDeleted="deleteTask" @taskStateChanged="toggleTaskState"></TaskGrid>
+		<Footer/>
 	</div>
 </template>
 
 <script>
 
+import Footer from './components/Footer.vue'
 import TaskProgress from './components/TaskProgress.vue'
 import TaskGrid from './components/TaskGrid.vue'
 import NewTask from './components/NewTask.vue'
 
 export default {
-	components:{ TaskGrid, NewTask, TaskProgress },
+	components:{ TaskGrid, NewTask, TaskProgress,Footer },
 	data(){
 		return{
 			tasks:[]
@@ -41,7 +43,7 @@ export default {
 			addTask(task){
 				//Verifica se está na lista
 				const sameName = t => t.name === task.name
-				const reallyNew = this.tasks.filter(sameName).length == 0 
+				const reallyNew = this.tasks.filter(sameName).length == 0  
 				if(reallyNew){
 					this.tasks.push({
 						name:task.name,

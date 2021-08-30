@@ -29,7 +29,7 @@ export default {
         position: absolute;
         height: 100%;
         border-radius: 8px;
-        background-color: #0aecde;
+        background: linear-gradient(270deg, rgba(204,236,10,1) 0%, rgba(0,236,255,1) 100%);;
         align-self: flex-start;
     }
 
