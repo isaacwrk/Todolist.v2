@@ -44,12 +44,21 @@ export default {
     background-color: #F44336;
 }
 
+.pending:hover{
+    background-color: #f5564b;
+}
+
 .done{
     color:#DDD;
     border-left: 12px solid #0A8F08;
     background-color: #4CAF50;
     text-decoration: line-through;
 }
+
+.done:hover{
+    border-left: 12px solid #5ed662;
+}
+
 .pending .close{
     background-color: #B73229;
 }

@@ -13,9 +13,11 @@ export default {
 <style>
 .link{
     text-decoration: none;
-    color:white;
+    color:rgb(68, 66, 68);
+    font-size: 21px;
+    font-weight: 500;
 }
 .link:hover{
-    color:rgb(209, 205, 205);
+    color:rgb(209, 209, 205);
 }
 </style>

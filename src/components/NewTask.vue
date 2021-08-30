@@ -31,7 +31,7 @@ export default {
         font-size: 2rem;
         border: 1px solid #FFF;
         padding: 5px 10px 8px;
-        color: #FFF;
+        color: rgb(58, 54, 54);
     }
 
     input.form-element{
