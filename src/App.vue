@@ -27,6 +27,16 @@ export default {
 				return Math.round(done / total * 100) || 0
 			}
 		},
+		watch:{
+			tasks:{
+				//"vigia" profundamente todos os objetos relacionados do array com deep
+				deep: true,
+				handler(){
+					localStorage.setItem('tasks',JSON.stringify(this.tasks))
+				}
+			}
+		},
+
 		methods: {
 			addTask(task){
 				//Verifica se está na lista
@@ -45,7 +55,12 @@ export default {
 			toggleTaskState(i){
 				this.tasks[i].pending = !this.tasks[i].pending
 			}
-		}
+		},
+		created(){
+				const json = localStorage.getItem('tasks')
+				const array = JSON.parse(json)
+				this.tasks =  Array.isArray(array) ? array : []
+			}
 }
 </script>
 
