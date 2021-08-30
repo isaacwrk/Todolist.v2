@@ -25,8 +25,8 @@ export default {
 <style>
 	body {
 		font-family: 'Lato', sans-serif;
-		background: rgb(4,78,79);
-		background: linear-gradient(0deg, rgba(4,78,79,1) 0%, rgba(45,253,100,1) 100%);
+		background: rgb(50,153,98);
+		background: linear-gradient(0deg, rgba(50,153,98,1) 0%, rgba(20,20,20,1) 100%);
 		color: #FFF;
 	}
 
