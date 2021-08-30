@@ -12,8 +12,8 @@ export default {
     computed:{
         stateClass(){
             return {
-                peding: this.task.peding,
-                done: !this.task.peding
+                pending: this.task.pending,
+                done: !this.task.pending
             }
         }
     }
@@ -36,7 +36,7 @@ export default {
     align-items: center;
 }
 
-.peding{
+.pending{
     border-left: 12px solid #B73229;
     background-color: #F44336;
 }

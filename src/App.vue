@@ -1,6 +1,7 @@
 <template>
 	<div id="app">
 		<h1>Tarefas</h1>
+		<NewTask @taskAdded="addTask"></NewTask>
 		<TaskGrid :tasks="tasks"></TaskGrid>
 	</div>
 </template>
@@ -8,17 +9,31 @@
 <script>
 
 import TaskGrid from './components/TaskGrid.vue'
+import NewTask from './components/NewTask.vue'
 
 export default {
-	components:{ TaskGrid },
+	components:{ TaskGrid, NewTask },
 	data(){
 		return{
 			tasks:[
-				{ name:'Pagar boletos', peding:false },
-				{ name:'Estudar', peding:true },
+				// { name:'Pagar boletos', pending:false },
+				// { name:'Estudar', pending:true },
 			]
+		}	
+		},
+		methods: {
+			addTask(task){
+				//Verifica se está na lista
+				const sameName = t => t.name === task.name
+				const reallyNew = this.tasks.filter(sameName).length == 0 
+				if(reallyNew){
+					this.tasks.push({
+						name:task.name,
+						pending: task.pending || true
+					})
+				}
+			}
 		}
-	}
 }
 </script>
 
